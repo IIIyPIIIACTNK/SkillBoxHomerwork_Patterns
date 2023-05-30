@@ -12,11 +12,11 @@ namespace SkillBoxHomerwork_18_Patterns
     {
         public AnimalRepository? Repository { get; set; } = new AnimalRepository();
         DataSerializer ds;
-        public IAddAnimal AddAnimalInterface;
+        public IAnimalRepositoryControl RepositoryControl;
 
         public Presenter()
         {
-            AddAnimalInterface = Repository;
+            RepositoryControl = Repository;
         }
         public void AddAnimal(string Type, string Name, int Age, bool IsAlive)
         {

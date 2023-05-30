@@ -31,13 +31,14 @@ namespace SkillBoxHomerwork_18_Patterns
 
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-            presenter.AddAnimalInterface.AddAnimal(InputType.Text, InputName.Text, Convert.ToInt32(InputAge.Text), Convert.ToBoolean(InputState.IsChecked));
+            presenter.RepositoryControl.AddAnimal(InputType.Text, InputName.Text, Convert.ToInt32(InputAge.Text), Convert.ToBoolean(InputState.IsChecked));
             InputType.Text = string.Empty;
             InputName.Text = string.Empty;
             InputAge.Text = string.Empty;
             InputState.IsChecked = false;
         }
 
+        
         private void SaveToTxt_Click(object sender, RoutedEventArgs e)
         {
             presenter.UpdateTxt();
@@ -46,6 +47,11 @@ namespace SkillBoxHomerwork_18_Patterns
         private void SaveToXlsx_Click(object sender, RoutedEventArgs e)
         {
             presenter.UpdateXlsx();
+        }
+
+        private void DeleteAnimal_Click(object sender, RoutedEventArgs e)
+        {
+            presenter.RepositoryControl.DeleteAnimal((IAnimalEntity)AnimalList.SelectedItem);
         }
     }
 }

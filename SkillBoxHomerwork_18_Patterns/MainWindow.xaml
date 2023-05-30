@@ -40,8 +40,10 @@
         <CheckBox x:Name="InputState" Height="20" Width="20" VerticalAlignment="Bottom"
                  Margin="0,0,110,90" HorizontalAlignment="Right" RenderTransformOrigin="-1.298,0.596"/>
 
-        <Button Height="40" VerticalAlignment="Bottom" Margin="60,0,640,32"
+        <Button Height="40" Width="100" VerticalAlignment="Bottom" Margin="0,0,600,30"
                 Content="Добавить" Background="Aquamarine" Click="AddButtonClick"/>
+        <Button Height="40" Width="100" Content="Удалить" HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Margin="0,0,300,30" Click="DeleteAnimal_Click"/>
         <Button Height="20" Width="100" Content="Сохранить в txt" HorizontalAlignment="Right"
                 VerticalAlignment="Bottom" Margin="0,0,30,60" Click="SaveToTxt_Click"/>
         <Button Height="20" Width="100" Content="Сохранить в xlsx" HorizontalAlignment="Right"

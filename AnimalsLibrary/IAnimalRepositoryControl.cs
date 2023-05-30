@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AnimalsLibrary
 {
-    public interface IAddAnimal
+    public interface IAnimalRepositoryControl
     {
         public void AddAnimal(string Type, string Name, int Age, bool Status);
+
+        public void DeleteAnimal(IAnimalEntity animal);
     }
 }

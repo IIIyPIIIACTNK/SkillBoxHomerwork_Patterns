@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace AnimalsLibrary
 {
-    public class AnimalRepository : IAddAnimal
+    public class AnimalRepository : IAnimalRepositoryControl
     {
         private ObservableCollection<IAnimalEntity> animals = new ObservableCollection<IAnimalEntity>()
         {
@@ -25,6 +25,11 @@ namespace AnimalsLibrary
         public void AddAnimal(string Type,string Name, int Age, bool Status)
         {
             animals.Add(AnimalFactory.GetAnimal(Type, Name, Age, Status));
+        }
+
+        public void DeleteAnimal(IAnimalEntity animal)
+        {
+            animals.Remove(animal);
         }
     }
 }
