@@ -12,13 +12,15 @@ namespace AnimalsLibrary.Animals
         public int Age { get ; set ; }
         public bool IsAlive { get; set; }
 
+        public string Family => FormFamilyString();
+
         public NullAnimal()
         {
             Name = "Null";
             Age= 0;
             IsAlive = false;
         }
-        public string ReturnFamily()
+        public string FormFamilyString()
         {
             return "Null";
         }

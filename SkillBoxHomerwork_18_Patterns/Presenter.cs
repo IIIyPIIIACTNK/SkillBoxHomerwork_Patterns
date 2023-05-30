@@ -9,7 +9,7 @@ namespace SkillBoxHomerwork_18_Patterns
 {
     public class Presenter
     {
-        public AnimalRepository Repository { get; set; }
+        public AnimalRepository? Repository { get; set; } = new AnimalRepository();
 
         //RelayCommand? addAnimal;
 

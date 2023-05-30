@@ -22,7 +22,7 @@ namespace AnimalsLibrary
 
         public void Add(IAnimalEntity animalEntity)
         {
-            Animals.Add(animalEntity);
+            animals.Add(animalEntity);
         }
     }
 }

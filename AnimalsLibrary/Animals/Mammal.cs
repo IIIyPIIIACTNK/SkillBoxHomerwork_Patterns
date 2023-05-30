@@ -12,6 +12,8 @@ namespace AnimalsLibrary.Animals
         public int Age { get ; set ; }
         public bool IsAlive { get; set; }
 
+        public string Family { get { return FormFamilyString(); } }
+
         public Mammal(string name, int age, bool isAlive)
         {
             Name = name;
@@ -19,7 +21,7 @@ namespace AnimalsLibrary.Animals
             IsAlive = isAlive;
         }
 
-        public string ReturnFamily()
+        public string FormFamilyString()
         {
             return "Млекопитающие";
         }

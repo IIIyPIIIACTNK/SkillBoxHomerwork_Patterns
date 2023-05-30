@@ -11,7 +11,7 @@ namespace AnimalsLibrary.Animals
         public string Name { get ; set ; }
         public int Age { get ; set ; }
         public bool IsAlive { get; set; }
-
+        public string Family { get { return FormFamilyString(); } }
         public Bird(string name, int age, bool isAlive)
         {
             Name = name;
@@ -19,7 +19,7 @@ namespace AnimalsLibrary.Animals
             IsAlive = isAlive;
         }
 
-        public string ReturnFamily()
+        public string FormFamilyString()
         {
             return "Птица";
         }

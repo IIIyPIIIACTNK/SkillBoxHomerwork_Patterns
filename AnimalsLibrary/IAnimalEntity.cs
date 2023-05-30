@@ -12,6 +12,7 @@ namespace AnimalsLibrary
         public int Age { get; set; }
         public bool IsAlive { get; set; }
 
-        public string ReturnFamily();
+        public string Family { get;}
+        string FormFamilyString();
     }
 }
