@@ -30,7 +30,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
+
         <TextBox x:Name="InputType" Height="20" Width="100" VerticalAlignment="Bottom"
                  Margin="60,0,640,90"/>
         <TextBox x:Name="InputName" Height="20" Width="100" VerticalAlignment="Bottom"
@@ -40,8 +40,13 @@
         <CheckBox x:Name="InputState" Height="20" Width="20" VerticalAlignment="Bottom"
                  Margin="0,0,110,90" HorizontalAlignment="Right" RenderTransformOrigin="-1.298,0.596"/>
 
-        <Button Width="300" Height="40" VerticalAlignment="Bottom" Margin="30"
-                Content="Добавить" Background="Aquamarine"/>
+        <Button Height="40" VerticalAlignment="Bottom" Margin="60,0,640,32"
+                Content="Добавить" Background="Aquamarine" Click="AddButtonClick"/>
+        <Button Height="20" Width="100" Content="Сохранить в txt" HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" Margin="0,0,30,60" Click="SaveToTxt_Click"/>
+        <Button Height="20" Width="100" Content="Сохранить в xlsx" HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" Margin="0,0,30,30" Click="SaveToXlsx_Click"/>
+
 
     </Grid>
 </Window>

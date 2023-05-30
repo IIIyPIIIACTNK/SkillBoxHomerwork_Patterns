@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalsLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,25 @@ namespace SkillBoxHomerwork_18_Patterns
             InitializeComponent();
             DataContext = presenter;
             AnimalList.ItemsSource = presenter.Repository.Animals;
+        }
+
+        private void AddButtonClick(object sender, RoutedEventArgs e)
+        {
+            presenter.AddAnimalInterface.AddAnimal(InputType.Text, InputName.Text, Convert.ToInt32(InputAge.Text), Convert.ToBoolean(InputState.IsChecked));
+            InputType.Text = string.Empty;
+            InputName.Text = string.Empty;
+            InputAge.Text = string.Empty;
+            InputState.IsChecked = false;
+        }
+
+        private void SaveToTxt_Click(object sender, RoutedEventArgs e)
+        {
+            presenter.UpdateTxt();
+        }
+
+        private void SaveToXlsx_Click(object sender, RoutedEventArgs e)
+        {
+            presenter.UpdateXlsx();
         }
     }
 }

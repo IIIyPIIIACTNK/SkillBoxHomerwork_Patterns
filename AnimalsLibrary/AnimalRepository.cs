@@ -6,10 +6,11 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AnimalsLibrary
 {
-    public class AnimalRepository
+    public class AnimalRepository : IAddAnimal
     {
         private ObservableCollection<IAnimalEntity> animals = new ObservableCollection<IAnimalEntity>()
         {
@@ -20,9 +21,10 @@ namespace AnimalsLibrary
 
         public ObservableCollection<IAnimalEntity> Animals { get { return animals; } set { animals = value; } }
 
-        public void Add(IAnimalEntity animalEntity)
+
+        public void AddAnimal(string Type,string Name, int Age, bool Status)
         {
-            animals.Add(animalEntity);
+            animals.Add(AnimalFactory.GetAnimal(Type, Name, Age, Status));
         }
     }
 }
